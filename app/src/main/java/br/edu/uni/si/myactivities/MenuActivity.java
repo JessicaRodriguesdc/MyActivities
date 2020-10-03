@@ -6,28 +6,29 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
-public class LoginActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
-    private Button btLogar;
+    private ImageView ivLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_menu);
 
-        btLogar = (Button) findViewById(R.id.btLogar);
+        ivLogout = (ImageView) findViewById(R.id.ivLogout);
 
-        btLogar.setOnClickListener(new View.OnClickListener() {
+        ivLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btLogin(v);
+                ivLogout(v);
             }
         });
     }
 
-    public void btLogin(View v){
-        Intent intent = new Intent(this,MenuActivity.class);
+    public void ivLogout(View v){
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }
