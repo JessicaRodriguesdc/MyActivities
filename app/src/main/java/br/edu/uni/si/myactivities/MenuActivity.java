@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class MenuActivity extends AppCompatActivity {
 
     private ImageView ivLogout;
+    private ImageView ivLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,24 @@ public class MenuActivity extends AppCompatActivity {
                 ivLogout(v);
             }
         });
+
+        ivLista = (ImageView) findViewById(R.id.ivLista);
+
+        ivLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivLista(v);
+            }
+        });
     }
 
     public void ivLogout(View v){
         Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void ivLista(View v){
+        Intent intent = new Intent(this,ListActivity.class);
         startActivity(intent);
     }
 }
