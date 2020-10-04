@@ -5,31 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00BCD4"
+    android:scrollbarSize="10dp"
     tools:context=".MenuActivity">
 
-    <ImageView
-        android:id="@+id/ivLogout"
-        android:layout_width="42dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="333dp"
+        android:layout_height="527dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/tvDesenvolvedor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_lock_power_off" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintVertical_bias="0.49" />
 
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="98dp"
         android:layout_height="47dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
         android:text="Menu"
         android:textColor="@android:color/background_light"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/ivLogout"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/ivMenu"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLista"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
     <ImageView
         android:id="@+id/ivLista"
@@ -57,8 +60,8 @@
 
     <ImageView
         android:id="@+id/ivMenu"
-        android:layout_width="77dp"
-        android:layout_height="71dp"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="40dp"
@@ -80,5 +83,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibLogout"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTitulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_power_off" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,65 +7,41 @@
     android:background="#00BCD4"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/tvLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Login"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivListagem" />
-
     <EditText
         android:id="@+id/ttLogin"
         android:layout_width="256dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="fulano@gmail.com"
         android:inputType="textPersonName"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         android:textColorHighlight="@android:color/darker_gray"
         android:textColorHint="@android:color/tab_indicator_text"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
-
-    <TextView
-        android:id="@+id/tvSenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Senha"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ttLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/ivListagem" />
 
     <EditText
         android:id="@+id/ttPassword"
         android:layout_width="253dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="xxxxxxxxxxxx"
         android:inputType="textPassword"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         android:textColorHighlight="@android:color/darker_gray"
         android:textColorHint="@android:color/tertiary_text_dark"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/ttLogin" />
 
     <ImageView
         android:id="@+id/ivListagem"
@@ -98,11 +74,11 @@
         android:id="@+id/ivLogin"
         android:layout_width="78dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="155dp"
         app:layout_constraintEnd_toStartOf="@+id/ttLogin"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin"
+        app:layout_constraintTop_toBottomOf="@+id/ivListagem"
         app:srcCompat="@android:drawable/sym_action_email" />
 
     <ImageView
@@ -111,11 +87,11 @@
         android:layout_height="53dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toStartOf="@+id/ttPassword"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSenha"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogin"
         app:srcCompat="@android:drawable/ic_lock_idle_lock" />
 
     <TextView
@@ -128,6 +104,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
         android:text="©Jéssica Rodrigues 2020"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

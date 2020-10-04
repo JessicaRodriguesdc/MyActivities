@@ -1,18 +1,17 @@
 package br.edu.uni.si.myactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.ListViewCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 public class ListActivity extends AppCompatActivity {
 
-    private ImageView ivVoltar;
+    private ImageButton ibVoltar;
     private String[] listaAtvdd = {"Fazer testes de Rede",
             "Verificar chamadas do suporte",
             "Concluir AP1´s",
@@ -31,17 +30,17 @@ public class ListActivity extends AppCompatActivity {
         ListView listView = (ListView)findViewById(R.id.lvLista);
         listView.setAdapter(adapter);
 
-        ivVoltar = (ImageView) findViewById(R.id.ivVoltar);
+        ibVoltar = (ImageButton) findViewById(R.id.ibVoltar);
 
-        ivVoltar.setOnClickListener(new View.OnClickListener() {
+        ibVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ivVoltar(v);
+                ibVoltar(v);
             }
         });
     }
 
-    public void ivVoltar(View v){
+    public void ibVoltar(View v){
         Intent intent = new Intent(this,MenuActivity.class);
         startActivity(intent);
     }
