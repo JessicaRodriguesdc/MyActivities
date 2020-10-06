@@ -16,7 +16,7 @@
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginBottom="30dp"
-        android:background="@android:color/holo_green_dark"
+        android:background="@drawable/bg_button_rounder"
         android:text="Logar-se"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/btCadastrar"
@@ -32,7 +32,7 @@
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginBottom="100dp"
-        android:background="@android:color/holo_red_light"
+        android:background="@drawable/bg_button_rounder1"
         android:text="Cadastrar-se"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/tvSlogan"
@@ -41,14 +41,13 @@
 
     <ImageView
         android:id="@+id/ivListagem"
-        android:layout_width="231dp"
-        android:layout_height="265dp"
+        android:layout_width="228dp"
+        android:layout_height="217dp"
         android:layout_marginBottom="40dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/btLogar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvSlogan"

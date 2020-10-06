@@ -82,9 +82,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:background="@android:color/background_light"
+        android:background="@drawable/bg_edittext_rounded"
         android:ems="10"
         android:inputType="textPersonName"
+        android:paddingLeft="20dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,9 +115,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:background="@android:color/background_light"
+        android:background="@drawable/bg_edittext_rounded"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
@@ -130,9 +132,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:background="@android:color/background_light"
+        android:background="@drawable/bg_edittext_rounded"
         android:ems="10"
         android:inputType="textPassword"
+        android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
@@ -161,6 +164,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/bg_button_rounder"
         android:text="Salvar"
+        android:textColor="@android:color/background_light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ettPassword" />
 
@@ -171,8 +175,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:background="#FF9800"
+        android:background="@drawable/bg_button_rounder2"
         android:text="Limpar"
+        android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ettPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>

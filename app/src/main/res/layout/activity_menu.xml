@@ -18,7 +18,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:background="@android:color/background_light"
+        android:background="@drawable/bg_edittext_rounded"
         app:layout_constraintBottom_toTopOf="@+id/tvDesenvolvedor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,28 +35,6 @@
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/ivMenu"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivAdd"
-        android:layout_width="159dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="52dp"
-        android:background="#99DC4C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLista"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
-    <ImageView
-        android:id="@+id/ivLista"
-        android:layout_width="163dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="108dp"
-        android:background="#99DC4C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
-        app:srcCompat="@android:drawable/ic_input_get" />
 
     <ImageView
         android:id="@+id/ivMenu"
@@ -86,14 +64,34 @@
 
     <ImageButton
         android:id="@+id/ibLogout"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
         android:layout_marginStart="90dp"
         android:layout_marginLeft="90dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvTitulo"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+    <ImageButton
+        android:id="@+id/ibLista"
+        android:layout_width="181dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:srcCompat="@drawable/listagem" />
+
+    <ImageButton
+        android:id="@+id/ibAdd"
+        android:layout_width="179dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibLista"
+        app:srcCompat="@drawable/add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

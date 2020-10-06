@@ -12,8 +12,8 @@ import android.widget.ImageView;
 public class MenuActivity extends AppCompatActivity {
 
     private ImageButton ibLogout;
-    private ImageView ivLista;
-    private ImageView ivAdd;
+    private ImageButton ibLista;
+    private ImageButton ibAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,9 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         ibLogout = (ImageButton) findViewById(R.id.ibLogout);
+        ibLista = (ImageButton) findViewById(R.id.ibLista);
+        ibAdd = (ImageButton) findViewById(R.id.ibAdd);
+
 
         ibLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,22 +31,16 @@ public class MenuActivity extends AppCompatActivity {
                 ibLogout(v);
             }
         });
-
-        ivLista = (ImageView) findViewById(R.id.ivLista);
-
-        ivLista.setOnClickListener(new View.OnClickListener() {
+        ibLista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ivLista(v);
+                ibLista(v);
             }
         });
-
-        ivAdd = (ImageView) findViewById(R.id.ivAdd);
-
-        ivAdd.setOnClickListener(new View.OnClickListener() {
+        ibAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ivAdd(v);
+                ibAdd(v);
             }
         });
     }
@@ -53,12 +50,12 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void ivLista(View v){
+    public void ibLista(View v){
         Intent intent = new Intent(this,ListActivity.class);
         startActivity(intent);
     }
 
-    public void ivAdd(View v){
+    public void ibAdd(View v){
         Intent intent = new Intent(this,AddActivity.class);
         startActivity(intent);
     }
