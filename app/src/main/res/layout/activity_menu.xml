@@ -9,7 +9,7 @@
     tools:context=".MenuActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvLayout"
         android:layout_width="333dp"
         android:layout_height="527dp"
         android:layout_marginStart="30dp"
