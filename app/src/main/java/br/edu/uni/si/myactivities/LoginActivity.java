@@ -6,11 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton ibVoltar;
+    private EditText ettLogin;
+    private EditText ettPassword;;
     private Button btLogar;
 
     @Override
@@ -19,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         ibVoltar = (ImageButton) findViewById(R.id.ibVoltar);
+        ettLogin = (EditText) findViewById(R.id.ettLogin);
+        ettPassword = (EditText) findViewById(R.id.ettPassword);
         btLogar = (Button) findViewById(R.id.btLogar);
 
         ibVoltar.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +49,18 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void btLogin(View v){
+
+        if(ettLogin.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(),"Campo Login vazio",Toast.LENGTH_LONG).show();
+            ettLogin.requestFocus();
+            return;
+        }
+        if(ettPassword.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(),"Campo Senha vazio",Toast.LENGTH_LONG).show();
+            ettPassword.requestFocus();
+            return;
+        }
+
         Intent intent = new Intent(this,MenuActivity.class);
         startActivity(intent);
     }
