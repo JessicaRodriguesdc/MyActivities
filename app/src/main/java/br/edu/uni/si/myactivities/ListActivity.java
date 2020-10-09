@@ -9,21 +9,21 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import java.util.Date;
+
+import br.edu.uni.si.myactivities.model.Atividade;
+
 public class ListActivity extends AppCompatActivity {
 
     private ImageButton ibVoltar;
-    private String[] listaAtvdd = {"Fazer testes de Rede",
-            "Verificar chamadas do suporte",
-            "Concluir AP1´s",
-            "Concluir projetos",
-            "Fazer tarefas de casa",
-            "Assistir Anime",
-            "Desenhar"};
+    private String[] listaAtvdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        listaAtividadeFake();
 
         ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.activity_list_atvdd,listaAtvdd);
 
@@ -43,5 +43,29 @@ public class ListActivity extends AppCompatActivity {
     public void ibVoltar(View v){
         Intent intent = new Intent(this,MenuActivity.class);
         startActivity(intent);
+    }
+
+
+    private void listaAtividadeFake(){
+        Atividade atd1 = new Atividade("Fazer testes de Rede", "Atividade de rede", new Date(01 - 9 - 2020), new Date(01 - 10 - 2020));
+        Atividade atd2 = new Atividade("Verificar chamadas do suporte", "Atidade da Empresa", new Date(02 - 9 - 2020), new Date(02 - 10 - 2020));
+        Atividade atd3 = new Atividade("Concluir AP1´s", "Provas", new Date(02 - 9 - 2020), new Date(02 - 10 - 2020));
+        Atividade atd4 = new Atividade("Concluir projetos", "Projetos Pessoais", new Date(03 - 9 - 2020), new Date(03 - 10 - 2020));
+        Atividade atd5 = new Atividade("Fazer tarefas de casa", "Atividade de casa", new Date(04 - 9 - 2020), new Date(04 - 10 - 2020));
+        Atividade atd6 = new Atividade("Assistir Anime", "Lazer", new Date(05 - 9 - 2020), new Date(05 - 10 - 2020));
+        Atividade atd7 = new Atividade("Desenhar", "Lazer", new Date(06 - 9 - 2020), new Date(06 - 10 - 2020));
+
+        {
+            String[] atividades = {
+                    "Atividade: "+atd1.getNome()+" | Descrição: "+atd1.getNome(),
+                    "Atividade: "+atd2.getNome()+" | Descrição: "+atd2.getNome(),
+                    "Atividade: "+atd3.getNome()+" | Descrição: "+atd3.getNome(),
+                    "Atividade: "+atd4.getNome()+" | Descrição: "+atd4.getNome(),
+                    "Atividade: "+atd5.getNome()+" | Descrição: "+atd5.getNome(),
+                    "Atividade: "+atd6.getNome()+" | Descrição: "+atd6.getNome(),
+                    "Atividade: "+atd7.getNome()+" | Descrição: "+atd7.getNome()
+            };
+            listaAtvdd = atividades;
+        }
     }
 }
