@@ -24,7 +24,6 @@ public class MenuActivity extends AppCompatActivity {
         ibLista = (ImageButton) findViewById(R.id.ibLista);
         ibAdd = (ImageButton) findViewById(R.id.ibAdd);
 
-
         ibLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

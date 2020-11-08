@@ -56,7 +56,11 @@ public class AddActivity extends AppCompatActivity {
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btSalvar(v);
+                try {
+                    btSalvar(v);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -74,7 +78,7 @@ public class AddActivity extends AppCompatActivity {
         ettNomeAtividade.requestFocus();
     }
 
-    public void btSalvar(View v){
+    public void btSalvar(View v) throws ParseException {
         if(ettNomeAtividade.getText().toString().equals("")){
             Toast.makeText(getApplicationContext(),"Campo Nome vazio",Toast.LENGTH_LONG).show();
             ettNomeAtividade.requestFocus();
@@ -96,34 +100,35 @@ public class AddActivity extends AppCompatActivity {
             return;
         }
 
-
-
         this.atividade = new Atividade();
         this.atividade.setNome(ettNomeAtividade.getText().toString());
         this.atividade.setDescricao(ettDescricaoAtividade.getText().toString());
+        this.atividade.setDataInicial(etdDataInicio.getText().toString());
+        this.atividade.setDataFinal(etdDataTermino.getText().toString());
+
 
         String dataI = etdDataInicio.getText().toString();
+        Date dataI_formatada = new Date();
         String dataF = etdDataTermino.getText().toString();
+        Date dataF_formatada = new Date();
 
         try {
-            DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-            Date dataI_formatada = (Date)formatter.parse(dataI);
-            this.atividade.setDataInicial(dataI_formatada);
+            DateFormat formatterI = new SimpleDateFormat("dd/MM/yyyy");
+            dataI_formatada = (Date)formatterI.parse(dataI);
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-        try {
-            DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-            Date dataF_formatada = (Date)formatter.parse(dataF);
-            this.atividade.setDataFinal(dataF_formatada);
-        } catch (ParseException e) {
+         try{
+             DateFormat formatterF = new SimpleDateFormat("dd/MM/yyyy");
+             dataF_formatada = (Date)formatterF.parse(dataF);
+         }catch (ParseException e) {
             e.printStackTrace();
-        }
+         }
 
 
         if(!atividade.toString().isEmpty()){
-            if(atividade.getDataFinal().getTime() < atividade.getDataInicial().getTime()){
+            if(dataI_formatada.getTime() < dataF_formatada.getTime()){
                 Toast.makeText(getApplicationContext(),"Data inicial não pode ser menor que a final",Toast.LENGTH_LONG).show();
                 return;
             }

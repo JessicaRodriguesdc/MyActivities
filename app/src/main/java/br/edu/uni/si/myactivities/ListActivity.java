@@ -9,8 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import java.util.Date;
-
 import br.edu.uni.si.myactivities.model.Atividade;
 
 public class ListActivity extends AppCompatActivity {
@@ -47,13 +45,13 @@ public class ListActivity extends AppCompatActivity {
 
 
     private void listaAtividadeFake(){
-        Atividade atd1 = new Atividade("Fazer testes de Rede", "Atividade de rede", new Date(01 - 9 - 2020), new Date(01 - 10 - 2020));
-        Atividade atd2 = new Atividade("Verificar chamadas do suporte", "Atidade da Empresa", new Date(02 - 9 - 2020), new Date(02 - 10 - 2020));
-        Atividade atd3 = new Atividade("Concluir AP1´s", "Provas", new Date(02 - 9 - 2020), new Date(02 - 10 - 2020));
-        Atividade atd4 = new Atividade("Concluir projetos", "Projetos Pessoais", new Date(03 - 9 - 2020), new Date(03 - 10 - 2020));
-        Atividade atd5 = new Atividade("Fazer tarefas de casa", "Atividade de casa", new Date(04 - 9 - 2020), new Date(04 - 10 - 2020));
-        Atividade atd6 = new Atividade("Assistir Anime", "Lazer", new Date(05 - 9 - 2020), new Date(05 - 10 - 2020));
-        Atividade atd7 = new Atividade("Desenhar", "Lazer", new Date(06 - 9 - 2020), new Date(06 - 10 - 2020));
+        Atividade atd1 = new Atividade("Fazer testes de Rede", "Atividade de rede", "01 - 9 - 2020", "01 - 10 - 2020");
+        Atividade atd2 = new Atividade("Verificar chamadas do suporte", "Atidade da Empresa", "02 - 9 - 2020", "02 - 10 - 2020");
+        Atividade atd3 = new Atividade("Concluir AP1´s", "Provas","02 - 9 - 2020", "02 - 10 - 2020");
+        Atividade atd4 = new Atividade("Concluir projetos", "Projetos Pessoais", "03 - 9 - 2020", "03 - 10 - 2020");
+        Atividade atd5 = new Atividade("Fazer tarefas de casa", "Atividade de casa", "04 - 9 - 2020", "04 - 10 - 2020");
+        Atividade atd6 = new Atividade("Assistir Anime", "Lazer", "05 - 9 - 2020", "05 - 10 - 2020");
+        Atividade atd7 = new Atividade("Desenhar", "Lazer", "06 - 9 - 2020", "06 - 10 - 2020");
 
         {
             String[] atividades = {

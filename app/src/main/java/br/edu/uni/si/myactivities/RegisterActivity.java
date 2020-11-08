@@ -35,7 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
         btLimpar = (Button) findViewById(R.id.btLimpar);
         btSalvar = (Button) findViewById(R.id.btSalvar);
 
-
         ibVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

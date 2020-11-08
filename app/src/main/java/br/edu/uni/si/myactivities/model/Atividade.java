@@ -1,23 +1,33 @@
 package br.edu.uni.si.myactivities.model;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Atividade {
 
+    private int id;
     private String nome;
     private String descricao;
-    private Date dataInicial;
-    private Date dataFinal;
+    private String dataInicial;
+    private String dataFinal;
+
 
     public Atividade() {
     }
 
-    public Atividade(String nome, String descricao, Date dataInicial, Date dataFinal) {
+    public Atividade(String nome, String descricao, String dataInicial, String dataFinal) {
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.dataInicial = dataInicial;
         this.dataFinal = dataFinal;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        id = id;
     }
 
     public String getNome() {
@@ -36,19 +46,19 @@ public class Atividade {
         this.descricao = descricao;
     }
 
-    public Date getDataInicial() {
+    public String getDataInicial() {
         return dataInicial;
     }
 
-    public void setDataInicial(Date dataInicial) {
+    public void setDataInicial(String dataInicial) {
         this.dataInicial = dataInicial;
     }
 
-    public Date getDataFinal() {
+    public String getDataFinal() {
         return dataFinal;
     }
 
-    public void setDataFinal(Date dataFinal) {
+    public void setDataFinal(String dataFinal) {
         this.dataFinal = dataFinal;
     }
 
@@ -56,6 +66,7 @@ public class Atividade {
     @Override
     public String toString() {
         return "Atividade{" +
+                "id='" + id + '\'' +
                 "nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", dataInicial=" + dataInicial +
@@ -69,7 +80,8 @@ public class Atividade {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Atividade atividade = (Atividade) o;
-        return Objects.equals(nome, atividade.nome) &&
+        return  Objects.equals(id, atividade.id) &&
+                Objects.equals(nome, atividade.nome) &&
                 Objects.equals(descricao, atividade.descricao) &&
                 Objects.equals(dataInicial, atividade.dataInicial) &&
                 Objects.equals(dataFinal, atividade.dataFinal);
@@ -77,6 +89,6 @@ public class Atividade {
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, descricao, dataInicial, dataFinal);
+        return Objects.hash(id,nome, descricao, dataInicial, dataFinal);
     }
 }
