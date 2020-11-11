@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import br.edu.uni.si.myactivities.dao.ScriptDLL;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String mDatabaseName = "activities.db";
@@ -22,8 +24,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-//        db.execSQL(ScriptDLL.getCreateTablePessoa());
-//        db.execSQL(ScriptDLL.getCreateTableAtividade());
+        db.execSQL(ScriptDLL.getCreateTablePessoa());
+        db.execSQL(ScriptDLL.getCreateTableAtividade());
     }
 
     @Override

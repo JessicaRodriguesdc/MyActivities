@@ -32,17 +32,17 @@ public class ScriptDLL {
 
     public static String getAtividades(){
         StringBuilder sql = new StringBuilder();
-        sql.append("Select ID, Nome, Descricao, DataInicial, DataFinal, PessoaId");
+        sql.append("Select a.ID, a.Nome, a.Descricao, a.DataInicial, a.DataFinal, a.PessoaId");
         sql.append(" from Atividade as a");
-        sql.append(" INNER JOIN Pessoa as p on p.id = a.PessoaId");
+        sql.append(" INNER JOIN Pessoa as p on  a.PessoaId = p.id");
         return sql.toString();
     }
 
     public static String getAtividade(){
         StringBuilder sql = new StringBuilder();
-        sql.append("Select ID, Nome, Descricao, DataInicial, DataFinal, PessoaId");
+        sql.append("Select a.ID, a.Nome, a.Descricao, a.DataInicial, a.DataFinal, a.PessoaId");
         sql.append(" from Atividade as a");
-        sql.append(" INNER JOIN Pessoa as p on p.id = a.PessoaId");
+        sql.append(" INNER JOIN Pessoa as p on  a.PessoaId = p.id");
         sql.append(" where ID = ?");
         return sql.toString();
     }

@@ -9,17 +9,19 @@ public class Atividade {
     private String descricao;
     private String dataInicial;
     private String dataFinal;
+    private Pessoa pessoa;
 
 
     public Atividade() {
     }
 
-    public Atividade(String nome, String descricao, String dataInicial, String dataFinal) {
+    public Atividade(String nome, String descricao, String dataInicial, String dataFinal,Pessoa pessoa) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.dataInicial = dataInicial;
         this.dataFinal = dataFinal;
+        this.pessoa = pessoa;
     }
 
     public int getId() {
@@ -62,6 +64,13 @@ public class Atividade {
         this.dataFinal = dataFinal;
     }
 
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
 
     @Override
     public String toString() {
@@ -69,8 +78,9 @@ public class Atividade {
                 "id='" + id + '\'' +
                 "nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
-                ", dataInicial=" + dataInicial +
-                ", dataFinal=" + dataFinal +
+                ", dataInicial=" + dataInicial + '\'' +
+                ", dataFinal=" + dataFinal + '\'' +
+                ", pessoa=" + pessoa + '\'' +
                 '}';
     }
 
@@ -84,11 +94,13 @@ public class Atividade {
                 Objects.equals(nome, atividade.nome) &&
                 Objects.equals(descricao, atividade.descricao) &&
                 Objects.equals(dataInicial, atividade.dataInicial) &&
-                Objects.equals(dataFinal, atividade.dataFinal);
+                Objects.equals(dataFinal, atividade.dataFinal) &&
+                Objects.equals(pessoa, atividade.pessoa);
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id,nome, descricao, dataInicial, dataFinal);
+        return Objects.hash(id,nome, descricao, dataInicial, dataFinal,pessoa);
     }
 }
