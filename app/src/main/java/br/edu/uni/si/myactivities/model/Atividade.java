@@ -15,7 +15,7 @@ public class Atividade {
     public Atividade() {
     }
 
-    public Atividade(String nome, String descricao, String dataInicial, String dataFinal,Pessoa pessoa) {
+    public Atividade(int id, String nome, String descricao, String dataInicial, String dataFinal,Pessoa pessoa) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -76,7 +76,7 @@ public class Atividade {
     public String toString() {
         return "Atividade{" +
                 "id='" + id + '\'' +
-                "nome='" + nome + '\'' +
+                ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", dataInicial=" + dataInicial + '\'' +
                 ", dataFinal=" + dataFinal + '\'' +

@@ -66,7 +66,7 @@ public class Pessoa {
     public String toString() {
         return "Pessoa{" +
                 "id='" + id + '\'' +
-                "nome='" + nome + '\'' +
+                ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +
                 ", atividades='" + atividades + '\'' +
