@@ -58,8 +58,8 @@ public class AtividadeDAO {
                 atividade.setDescricao(result.getString(result.getColumnIndexOrThrow("Descricao")));
                 atividade.setDataInicial(result.getString(result.getColumnIndexOrThrow("DataInicial")));
                 atividade.setDataFinal(result.getString(result.getColumnIndexOrThrow("DataFinal")));
-                int idPessoa = (result.getInt(result.getColumnIndexOrThrow("PessoaId")));
-                pessoa.setId(idPessoa);
+//                int idPessoa = (result.getInt(result.getColumnIndexOrThrow("PessoaId")));
+//                pessoa.setId(idPessoa);
                 atividade.setPessoa(pessoa);
                 atividades.add(atividade);
             }while(result.moveToNext());
