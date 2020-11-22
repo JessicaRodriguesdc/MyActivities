@@ -73,10 +73,7 @@ public class Atividade {
 
     @Override
     public String toString() {
-        return " Nome :" + nome +
-                " | Descrição : " + descricao +
-                " | " + dataInicial +
-                " até " + dataFinal;
+        return " Atividade: " + nome;
     }
 
 

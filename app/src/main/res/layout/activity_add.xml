@@ -180,7 +180,7 @@
         app:srcCompat="?attr/homeAsUpIndicator" />
 
     <Button
-        android:id="@+id/btSalvar"
+        android:id="@+id/btEditar"
         android:layout_width="142dp"
         android:layout_height="55dp"
         android:layout_marginStart="35dp"

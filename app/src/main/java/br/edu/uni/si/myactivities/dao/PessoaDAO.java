@@ -49,7 +49,6 @@ public class PessoaDAO {
         if(result.getCount()>0){
             result.moveToFirst();
             pessoa.setId(result.getInt(result.getColumnIndexOrThrow("Id")));
-            pessoa.setNome(result.getString(result.getColumnIndexOrThrow("Nome")));
             return pessoa;
         }
         return null;

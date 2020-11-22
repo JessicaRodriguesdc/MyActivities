@@ -32,13 +32,13 @@ public class AtividadeDAO {
         params[0] = String.valueOf(id);
         mConection.delete("Atividade","Id = ?",params);
     }
-    public void alter(Atividade atividade,int pessoaId){
+    public void alter(Atividade atividade){
         ContentValues contentValues = new ContentValues();
         contentValues.put("Nome",atividade.getNome());
         contentValues.put("Descricao",atividade.getDescricao());
         contentValues.put("DataInicial",atividade.getDataInicial());
         contentValues.put("DataFinal",atividade.getDataFinal());
-        contentValues.put("PessoaId",pessoaId);
+        contentValues.put("PessoaId",atividade.getPessoa().getId());
         String[] params = new String[1];
         params[0] = String.valueOf(atividade.getId());
         mConection.update("Atividade",contentValues,"Id = ?",params);

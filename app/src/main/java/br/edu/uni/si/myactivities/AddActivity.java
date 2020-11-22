@@ -52,7 +52,7 @@ public class AddActivity extends AppCompatActivity {
         etdDataInicio = (EditText) findViewById(R.id.etdDataInicio);
         etdDataTermino = (EditText) findViewById(R.id.etdDataTermino);
         btLimpar = (Button) findViewById(R.id.btLimpar);
-        btSalvar = (Button) findViewById(R.id.btSalvar);
+        btSalvar = (Button) findViewById(R.id.btEditar);
 
         ibVoltar.setOnClickListener(new View.OnClickListener() {
             @Override

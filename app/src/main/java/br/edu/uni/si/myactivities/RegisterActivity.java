@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import java.text.DecimalFormat;
-
 import br.edu.uni.si.myactivities.conn.DatabaseHelper;
 import br.edu.uni.si.myactivities.dao.PessoaDAO;
 import br.edu.uni.si.myactivities.model.Pessoa;
@@ -41,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         ettEmail = (EditText) findViewById(R.id.ettEmail);
         ettPassword = (EditText) findViewById(R.id.ettPassword);
         btLimpar = (Button) findViewById(R.id.btLimpar);
-        btSalvar = (Button) findViewById(R.id.btSalvar);
+        btSalvar = (Button) findViewById(R.id.btEditar);
 
         ibVoltar.setOnClickListener(new View.OnClickListener() {
             @Override

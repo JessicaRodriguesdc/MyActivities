@@ -51,7 +51,9 @@ public class ListActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(), "Atividade: " + atividadeList.get(position).getNome(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ListActivity.this,ViewActivity.class);
+                intent.putExtra("id",atividadeList.get(position).getId());
+                startActivity(intent);
             }
         });
 

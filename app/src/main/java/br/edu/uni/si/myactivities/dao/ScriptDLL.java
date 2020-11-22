@@ -30,14 +30,6 @@ public class ScriptDLL {
         return sql.toString();
     }
 
-//    public static String getAtividades(){
-//        StringBuilder sql = new StringBuilder();
-//        sql.append("Select a.ID, a.Nome, a.Descricao, a.DataInicial, a.DataFinal, a.PessoaId");
-//        sql.append(" from Atividade as a");
-//        sql.append(" INNER JOIN Pessoa as p on  a.PessoaId = p.id");
-//        return sql.toString();
-//    }
-
     public static String getAtividades(){
         StringBuilder sql = new StringBuilder();
         sql.append("Select Id, Nome, Descricao, DataInicial, DataFinal");
@@ -59,7 +51,7 @@ public class ScriptDLL {
         sql.append("Select a.Id, a.Nome, a.Descricao, a.DataInicial, a.DataFinal, a.PessoaId");
         sql.append(" from Atividade as a");
         sql.append(" INNER JOIN Pessoa as p on  a.PessoaId = p.id");
-        sql.append(" where Id = ?");
+        sql.append(" where a.Id = ? ");
         return sql.toString();
     }
 
