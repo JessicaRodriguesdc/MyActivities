@@ -28,6 +28,7 @@ public class AddActivity extends AppCompatActivity {
     private DatabaseHelper mDataHelper;
     private AtividadeDAO atividadeDAO;
     private Atividade atividade;
+    private int idPessoa;
     private ImageButton ibVoltar;
     private EditText ettNomeAtividade;
     private EditText ettDescricaoAtividade;
@@ -41,6 +42,9 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
         createConection();
+
+        Intent intent = getIntent();
+        idPessoa = (int) intent.getSerializableExtra("pessoaId");
 
         ibVoltar = (ImageButton) findViewById(R.id.ibVoltar);
         ettNomeAtividade = (EditText) findViewById(R.id.ettNomeAtividade);
@@ -86,6 +90,7 @@ public class AddActivity extends AppCompatActivity {
 
     public void ibVoltar(View v){
         Intent intent = new Intent(this,MenuActivity.class);
+        intent.putExtra("pessoaId",idPessoa);
         startActivity(intent);
     }
 
@@ -126,7 +131,7 @@ public class AddActivity extends AppCompatActivity {
         this.atividade.setDataInicial(etdDataInicio.getText().toString());
         this.atividade.setDataFinal(etdDataTermino.getText().toString());
         Pessoa pessoa = new Pessoa();
-        pessoa.setId(1);
+        pessoa.setId(idPessoa);
         this.atividade.setPessoa(pessoa);
 
         this.atividadeDAO.insert(atividade);

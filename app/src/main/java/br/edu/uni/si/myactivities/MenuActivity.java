@@ -50,12 +50,20 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void ibLista(View v){
+        Intent intentId = getIntent();
+        int idPessoa = (int) intentId.getSerializableExtra("pessoaId");
+
         Intent intent = new Intent(this,ListActivity.class);
+        intent.putExtra("pessoaId",idPessoa);
         startActivity(intent);
     }
 
     public void ibAdd(View v){
+        Intent intentId = getIntent();
+        int idPessoa = (int) intentId.getSerializableExtra("pessoaId");
+
         Intent intent = new Intent(this,AddActivity.class);
+        intent.putExtra("pessoaId",idPessoa);
         startActivity(intent);
     }
 }
