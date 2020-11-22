@@ -30,7 +30,7 @@ public class AtividadeDAO {
     public void remove(int id){
         String[] params = new String[1];
         params[0] = String.valueOf(id);
-        mConection.delete("Atividade","ID = ?",params);
+        mConection.delete("Atividade","Id = ?",params);
     }
     public void alter(Atividade atividade,int pessoaId){
         ContentValues contentValues = new ContentValues();
@@ -41,7 +41,7 @@ public class AtividadeDAO {
         contentValues.put("PessoaId",pessoaId);
         String[] params = new String[1];
         params[0] = String.valueOf(atividade.getId());
-        mConection.update("Atividade",contentValues,"ID = ?",params);
+        mConection.update("Atividade",contentValues,"Id = ?",params);
 
     }
 
@@ -53,13 +53,35 @@ public class AtividadeDAO {
             do{
                 Atividade atividade = new Atividade();
                 Pessoa pessoa = new Pessoa();
-                atividade.setId(result.getInt(result.getColumnIndexOrThrow("ID")));
+                atividade.setId(result.getInt(result.getColumnIndexOrThrow("Id")));
                 atividade.setNome(result.getString(result.getColumnIndexOrThrow("Nome")));
                 atividade.setDescricao(result.getString(result.getColumnIndexOrThrow("Descricao")));
                 atividade.setDataInicial(result.getString(result.getColumnIndexOrThrow("DataInicial")));
                 atividade.setDataFinal(result.getString(result.getColumnIndexOrThrow("DataFinal")));
 //                int idPessoa = (result.getInt(result.getColumnIndexOrThrow("PessoaId")));
 //                pessoa.setId(idPessoa);
+                atividade.setPessoa(pessoa);
+                atividades.add(atividade);
+            }while(result.moveToNext());
+        }
+        return atividades;
+    }
+
+    public List<Atividade> listAtividadesIdPessoa(int id){
+        List<Atividade> atividades = new ArrayList<>();
+        String[] params = new String[1];
+        params[0] = String.valueOf(id);
+        Cursor result = mConection.rawQuery(ScriptDLL.getAtividadesIdPessoa(),params);
+        if(result.getCount()>0){
+            result.moveToFirst();
+            do{
+                Atividade atividade = new Atividade();
+                Pessoa pessoa = new Pessoa();
+                atividade.setId(result.getInt(result.getColumnIndexOrThrow("a.Id")));
+                atividade.setNome(result.getString(result.getColumnIndexOrThrow("a.Nome")));
+                atividade.setDescricao(result.getString(result.getColumnIndexOrThrow("a.Descricao")));
+                atividade.setDataInicial(result.getString(result.getColumnIndexOrThrow("a.DataInicial")));
+                atividade.setDataFinal(result.getString(result.getColumnIndexOrThrow("a.DataFinal")));
                 atividade.setPessoa(pessoa);
                 atividades.add(atividade);
             }while(result.moveToNext());
@@ -75,7 +97,7 @@ public class AtividadeDAO {
         Cursor result = mConection.rawQuery(ScriptDLL.getAtividade(),params);
         if(result.getCount()>0){
             result.moveToFirst();
-            atividade.setId(result.getInt(result.getColumnIndexOrThrow("ID")));
+            atividade.setId(result.getInt(result.getColumnIndexOrThrow("Id")));
             atividade.setNome(result.getString(result.getColumnIndexOrThrow("Nome")));
             atividade.setDescricao(result.getString(result.getColumnIndexOrThrow("Descricao")));
             atividade.setDataInicial(result.getString(result.getColumnIndexOrThrow("DataInicial")));
