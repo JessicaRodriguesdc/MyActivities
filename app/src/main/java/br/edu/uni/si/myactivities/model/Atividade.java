@@ -11,7 +11,6 @@ public class Atividade {
     private String dataFinal;
     private Pessoa pessoa;
 
-
     public Atividade() {
     }
 
@@ -29,7 +28,7 @@ public class Atividade {
     }
 
     public void setId(int id) {
-        id = id;
+        this.id = id;
     }
 
     public String getNome() {
@@ -74,14 +73,10 @@ public class Atividade {
 
     @Override
     public String toString() {
-        return "Atividade{" +
-                "id='" + id + '\'' +
-                ", nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", dataInicial=" + dataInicial + '\'' +
-                ", dataFinal=" + dataFinal + '\'' +
-                ", pessoa=" + pessoa + '\'' +
-                '}';
+        return " Nome :" + nome +
+                " | Descrição : " + descricao +
+                " | " + dataInicial +
+                " até " + dataFinal;
     }
 
 

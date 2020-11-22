@@ -77,6 +77,8 @@ public class LoginActivity extends AppCompatActivity {
 
         Boolean exist = this.pessoaDAO.getLogar(login,senha);
 
+        Pessoa pessoa = this.pessoaDAO.getIdByEmail(login);
+
         if(ettLogin.getText().toString().equals("")){
             Toast.makeText(getApplicationContext(),"Campo Login vazio",Toast.LENGTH_LONG).show();
             ettLogin.requestFocus();
@@ -95,6 +97,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this,MenuActivity.class);
+        intent.putExtra("pessoaId",pessoa.getId());
         startActivity(intent);
     }
 }

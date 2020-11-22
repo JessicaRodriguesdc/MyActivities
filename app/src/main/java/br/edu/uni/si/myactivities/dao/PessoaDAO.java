@@ -3,7 +3,6 @@ package br.edu.uni.si.myactivities.dao;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
 import br.edu.uni.si.myactivities.model.Pessoa;
 
 public class PessoaDAO {
@@ -42,4 +41,18 @@ public class PessoaDAO {
         return false;
     }
 
+    public Pessoa getIdByEmail(String email){
+        Pessoa pessoa = new Pessoa();
+        String[] params = new String[1];
+        params[0] = String.valueOf(email);
+        Cursor result = mConection.rawQuery(ScriptDLL.getEmailPessoa(),params);
+        if(result.getCount()>0){
+            result.moveToFirst();
+            pessoa.setId(result.getInt(result.getColumnIndexOrThrow("Id")));
+            pessoa.setNome(result.getString(result.getColumnIndexOrThrow("Nome")));
+            return pessoa;
+        }
+        return null;
+    }
 }
+
