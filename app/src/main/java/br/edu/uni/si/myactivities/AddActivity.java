@@ -52,7 +52,7 @@ public class AddActivity extends AppCompatActivity {
         etdDataInicio = (EditText) findViewById(R.id.etdDataInicio);
         etdDataTermino = (EditText) findViewById(R.id.etdDataTermino);
         btLimpar = (Button) findViewById(R.id.btLimpar);
-        btSalvar = (Button) findViewById(R.id.btEditar);
+        btSalvar = (Button) findViewById(R.id.btSalvar);
 
         ibVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +82,6 @@ public class AddActivity extends AppCompatActivity {
         try{
             mDataHelper = new DatabaseHelper(this.getApplicationContext());
             mConection = mDataHelper.getWritableDatabase();
-            Toast.makeText(this, "Banco criado com sucesso", Toast.LENGTH_SHORT).show();
         }catch(SQLException e){
             Toast.makeText(this,e.toString(),Toast.LENGTH_SHORT).show();
         }

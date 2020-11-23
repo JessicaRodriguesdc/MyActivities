@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         ettEmail = (EditText) findViewById(R.id.ettEmail);
         ettPassword = (EditText) findViewById(R.id.ettPassword);
         btLimpar = (Button) findViewById(R.id.btLimpar);
-        btSalvar = (Button) findViewById(R.id.btEditar);
+        btSalvar = (Button) findViewById(R.id.btSalvar);
 
         ibVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +65,6 @@ public class RegisterActivity extends AppCompatActivity {
         try{
             mDataHelper = new DatabaseHelper(this.getApplicationContext());
             mConection = mDataHelper.getWritableDatabase();
-            Toast.makeText(this, "Banco criado com sucesso", Toast.LENGTH_SHORT).show();
         }catch(SQLException e){
             Toast.makeText(this,e.toString(),Toast.LENGTH_SHORT).show();
         }

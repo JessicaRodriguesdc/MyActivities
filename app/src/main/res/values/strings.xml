@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">MyActivities</string>
+    <string name="app_name">My Activities</string>
+    <string name="btnLog">Log in</string>
+    <string name="btnSing">Sign Up</string>
+    <string name="tvManage">Manage your routine</string>
+    <string name="tvDev">©Jéssica Rodrigues 2020</string>
+    <string name="tvTitleMenu">Menu</string>
+    <string name="ettLog">fulano@gmail.com</string>
+    <string name="ettPass">xxxxxxxxxxxx</string>
+    <string name="btLog">Log</string>
+    <string name="tvTitleSign">Sign up</string>
+    <string name="tvName">Name</string>
+    <string name="tvEmail">E-mail</string>
+    <string name="tvPassword">Password</string>
+    <string name="btSave">To save</string>
+    <string name="tbClean">To clean</string>
+    <string name="tvListing">Listing</string>
+    <string name="btDelete">Delete</string>
+    <string name="tvDescription">Description</string>
+    <string name="tvPeriod">Up until</string>
+    <string name="tbEdit">To edit</string>
+    <string name="tvTitleNew">New Activity</string>
+    <string name="tvActivityName">Activity Name</string>
+    <string name="tvActivityDescription">Activity Description</string>
+    <string name="tvStartDate">Start Date</string>
+    <string name="tvEndDate">End Date</string>
+    <string name="tvTitleUpdate">Update Activity</string>
 </resources>

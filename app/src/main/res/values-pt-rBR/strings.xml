@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Minhas Atividades</string>
+    <string name="btnLog">Logar-se</string>
+    <string name="tvDev">©Jéssica Rodrigues 2020</string>
+    <string name="tvManage">"Gerencie sua rotina "</string>
+    <string name="btnSing">Cadastrar-se</string>
+    <string name="tvTitleMenu">Menu</string>
+    <string name="ettPass">xxxxxxxxxxxx</string>
+    <string name="ettLog">fulano@gmail.com</string>
+    <string name="btLog">Logar</string>
+    <string name="tvTitleSign">Cadastrar-se</string>
+    <string name="tvName">Nome</string>
+    <string name="tvEmail">E-mail</string>
+    <string name="tvPassword">Senha</string>
+    <string name="btSave">Salvar</string>
+    <string name="tbClean">Limpar</string>
+    <string name="tvListing">Listagem</string>
+    <string name="tvDescription">Descrição</string>
+    <string name="btDelete">Excluir</string>
+    <string name="tvPeriod">Até</string>
+    <string name="tbEdit">Editar</string>
+    <string name="tvTitleNew">Nova Atividade</string>
+    <string name="tvActivityName">Nome da Atividade</string>
+    <string name="tvActivityDescription">Descriçâo da Atividade</string>
+    <string name="tvEndDate">Término</string>
+    <string name="tvStartDate">Início</string>
+    <string name="tvTitleUpdate">Atualizar Atividade</string>
+</resources>

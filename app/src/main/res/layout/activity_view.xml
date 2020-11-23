@@ -16,7 +16,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:text="©Jéssica Rodrigues 2020"
+        android:text="@string/tvDev"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,20 +37,6 @@
         app:srcCompat="?attr/homeAsUpIndicator" />
 
     <Button
-        android:id="@+id/btEditar"
-        android:layout_width="112dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/bg_button_rounder2"
-        android:text="Editar"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataInicio" />
-
-    <Button
         android:id="@+id/btExcluir"
         android:layout_width="112dp"
         android:layout_height="53dp"
@@ -58,7 +44,7 @@
         android:layout_marginEnd="55dp"
         android:layout_marginRight="55dp"
         android:background="@drawable/bg_button_rounder1"
-        android:text="Excluir"
+        android:text="@string/btDelete"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +69,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="Descrição"
+        android:text="@string/tvDescription"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
-        android:text="Até"
+        android:text="@string/tvPeriod"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/tvDataTermino"
@@ -106,8 +92,8 @@
         android:id="@+id/tvDataInicio"
         android:layout_width="120dp"
         android:layout_height="54dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/bg_edittext_rounded"
         android:padding="15sp"
@@ -120,8 +106,8 @@
         android:layout_width="120dp"
         android:layout_height="54dp"
         android:layout_marginTop="70dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/bg_edittext_rounded"
         android:padding="15sp"
         android:textSize="18sp"
@@ -138,4 +124,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDescricaoAtividade" />
+
+    <Button
+        android:id="@+id/btEditar"
+        android:layout_width="112dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_button_rounder2"
+        android:text="@string/tbEdit"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDataInicio" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

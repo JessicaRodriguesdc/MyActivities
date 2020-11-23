@@ -16,7 +16,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:text="©Jéssica Rodrigues 2020"
+        android:text="@string/tvDev"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Cadastrar-se"
+        android:text="@string/tvTitleSign"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/ivRegister"
@@ -67,7 +67,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:text="Nome"
+        android:text="@string/tvName"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:text="Email"
+        android:text="@string/tvEmail"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,24 +149,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:text="Senha"
+        android:text="@string/tvPassword"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ettEmail" />
-
-    <Button
-        android:id="@+id/btEditar"
-        android:layout_width="142dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/bg_button_rounder"
-        android:text="Salvar"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ettPassword" />
 
     <Button
         android:id="@+id/btLimpar"
@@ -176,8 +163,23 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/bg_button_rounder2"
-        android:text="Limpar"
+        android:text="@string/tbClean"
         android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ettPassword" />
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="142dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_button_rounder"
+        android:text="@string/btSave"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ettPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>

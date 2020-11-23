@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         try{
             mDataHelper = new DatabaseHelper(this.getApplicationContext());
             mConection = mDataHelper.getWritableDatabase();
-            Toast.makeText(this, "Banco criado com sucesso", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Banco conectado", Toast.LENGTH_SHORT).show();
         }catch(SQLException e){
             Toast.makeText(this,e.toString(),Toast.LENGTH_SHORT).show();
         }
