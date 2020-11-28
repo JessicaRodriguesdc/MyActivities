@@ -26,4 +26,5 @@
     <string name="tvEndDate">Término</string>
     <string name="tvStartDate">Início</string>
     <string name="tvTitleUpdate">Atualizar Atividade</string>
+    <string name="tvWeather">>Ver Clima></string>
 </resources>

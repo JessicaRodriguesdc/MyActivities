@@ -25,4 +25,5 @@
     <string name="tvStartDate">Start Date</string>
     <string name="tvEndDate">End Date</string>
     <string name="tvTitleUpdate">Update Activity</string>
+    <string name="tvWeather">>See Weather></string>
 </resources>
