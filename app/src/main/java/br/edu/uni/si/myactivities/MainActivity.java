@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btLogar;
     private Button btCadastrar;
+    private TextView tvWeather;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         btLogar = (Button) findViewById(R.id.btLogar);
         btCadastrar = (Button) findViewById(R.id.btCadastrar);
+
+        tvWeather = (TextView) findViewById(R.id.tvWeather);
 
         btLogar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
                 btCadastrar(v);
             }
         });
+
+        tvWeather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                weather(v);
+            }
+        });
     }
 
     public void btLogar(View v){
@@ -41,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void btCadastrar(View v){
         Intent intent = new Intent(this,RegisterActivity.class);
+        startActivity(intent);
+    }
+
+    public void weather(View v){
+        Intent intent = new Intent(this,ViewWeatherActivity.class);
         startActivity(intent);
     }
 }
